@@ -1,0 +1,4 @@
+"strain","trait","E_sch","B0_sch","E_D_sch","T_pk_est_sch","P_pk_sch","r_sq_sch","n_temps","temps_before_peak","temps_after_peak","Phylum","Class","Order","Family","Genus","Species","iso_temp","incu_temp"
+"30_30_01","Growth Rate (OD)",0.812174887131513,0.0495880519384078,1.00470188634102,304.405913166597,0.328501667640067,0.711541204220936,7,6,1,"Actinobacteria","Actinobacteria","Streptomycetales","Streptomycetaceae","Streptomyces","sp.","30","30"
+"30_30_06","Growth Rate (OD)",0.115225935113109,0.183731335294008,5.84153388430919,302.800688414389,0.290883296873293,0.739126275384385,6,4,2,"Actinobacteria","Actinobacteria","Streptomycetales","Streptomycetaceae","Streptomyces","sp.","30","30"
+"30_30_07","Growth Rate (OD)",0.212785607576839,0.124576749800752,2.41363532488771,299.477140433099,0.251481963105841,0.252334558452334,5,4,1,"Actinobacteria","Actinobacteria","Streptomycetales","Streptomycetaceae","Streptomyces","sp.","30","30"
