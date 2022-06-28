@@ -50,6 +50,8 @@ best_fits[best_fits$iso_temp != "RT",]$iso_incu <- "Incu"
 
 isotemp_data <- best_fits[best_fits$iso_incu == "Incu",]
 isotemp_data$iso_temp <- as.numeric(as.character(isotemp_data$iso_temp))
+isotemp_data <- isotemp_data %>%
+  filter(temps_after_peak > 0)
 
 isotemp_plot <- ggplot(isotemp_data, aes(x = iso_temp, y = T_pk_est_sch-273.15)) +
   geom_point(size = 3) +

@@ -8,3 +8,4 @@ The scripts in `/code/` will reproduce the following figures and related analyse
  - fig 3: `Tpk_evolution.R`
  - fig 4A: `pca.R`
  - fig 4B: `ATP_plots.R`
+ - Fig 5 A/B/C/D: `meta-analysis-comparisons.R`
