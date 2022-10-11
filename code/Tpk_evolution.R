@@ -4,7 +4,7 @@
 ##
 ## Reproduces figure 3 and related analyses
 ##
-## Tom Smith 2021
+## Tom Smith 2022
 ##
 #################################################
 
@@ -17,7 +17,7 @@ library(geiger)
 library(coda)
 
 # read the time calibrated tree
-time_tree <- read.tree("data/dated_tree_20191101_01_combinedtree_new")
+time_tree <- read.tree("data/dated_tree_20220912_combined_new")
 
 plot(time_tree)
 
@@ -29,14 +29,18 @@ plot.phylo(tree, type = "fan", show.tip.label = FALSE)
 # now lets rearrange the tree somewhat so the branches are more sensibly placed
 
 tree <- rotateNodes(tree, 61)
+tree <- rotateNodes(tree, 62)
+tree <- rotateNodes(tree, 63)
 tree <- rotateNodes(tree, 70)
-tree <- rotateNodes(tree, 71)
-tree <- rotateNodes(tree, 75)
-tree <- rotateNodes(tree, 78)
-tree <- rotateNodes(tree, 79)
-tree <- rotateNodes(tree, 80)
-tree <- rotateNodes(tree, 83)
-tree <- rotateNodes(tree, 84)
+tree <- rotateNodes(tree, 89)
+tree <- rotateNodes(tree, 92)
+tree <- rotateNodes(tree, 93)
+tree <- rotateNodes(tree, 95)
+tree <- rotateNodes(tree, 100)
+tree <- rotateNodes(tree, 101)
+tree <- rotateNodes(tree, 108)
+tree <- rotateNodes(tree, 110)
+tree <- rotateNodes(tree, 113)
 
 
 # now onto the exciting stuff
@@ -101,7 +105,7 @@ trait_frame
 
 # we'll take the Tpk by eye from these strains
 
-trait_frame[21,]$Tpk <- 30 # 30_30_03
+trait_frame[20,]$Tpk <- 30 # 30_30_03
 trait_frame[60,]$Tpk <- 25 # 50_RT_02
 trait_frame[11,]$Tpk <- 25 # 30_RT_04
 trait_frame[12,]$Tpk <- 25 # 21_RT_01
@@ -139,8 +143,8 @@ add.color.bar(1500, obj$cols, title = "",
               lims = obj$lims, digits = 0, prompt = FALSE, x = -3800,
               y = -3000, lwd = 8, fsize = 1.5, subtitle = "1.5 BY")
 # add clade labels
-arc.cladelabels(text = "Firmicutes", node = 68, ln.offset = 1.05, lab.offset = 1.1, mark.node = FALSE, lwd = 2, cex = 2)
-arc.cladelabels(text = "Actinobacteria", node = 63, ln.offset = 1.05, lab.offset = 1.1, mark.node = FALSE, lwd = 2, cex = 2)
+arc.cladelabels(text = "Firmicutes", node = 63, ln.offset = 1.05, lab.offset = 1.1, mark.node = FALSE, lwd = 2, cex = 2)
+arc.cladelabels(text = "Actinobacteria", node = 99, ln.offset = 1.05, lab.offset = 1.1, mark.node = FALSE, lwd = 2, cex = 2)
 arc.cladelabels(text = "Proteobacteria", node = 104, ln.offset = 1.05, lab.offset = 1.1, mark.node = FALSE, lwd = 2, cex = 2)
 dev.off()
 
@@ -158,8 +162,8 @@ plotTree(tree,pts=F,node.numbers=T)
 
 # paint the clades in different states
 paintedtree<-paintSubTree(tree,node=104,state="2")
-paintedtree<-paintSubTree(paintedtree,node=63,state="3")
-paintedtree<-paintSubTree(paintedtree,node=68,state="4")
+paintedtree<-paintSubTree(paintedtree,node=99,state="3")
+paintedtree<-paintSubTree(paintedtree,node=63,state="4")
 
 # now let's plot using plotSimmap to ensure
 # that the correct branches were painted
@@ -235,5 +239,3 @@ aic.vals
 
 aic.w(aic.vals)
 # Brownian motion model appears to best fit the data.
-
-# easier just to stick with brownian motion and pagels lambda I think
