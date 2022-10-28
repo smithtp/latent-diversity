@@ -172,8 +172,12 @@ cols<-c("black","orange","red", "blue"); names(cols)<-1:4
 plotSimmap(paintedtree,cols,pts=F,lwd=3,node.numbers=T)
 
 # good, now plot the traitgram
-svg("results/Tpk_phenogram.svg", width = 10, height = 10)
-phenogram(paintedtree,x=Tpk_matrix,colors=cols,ftype = "off", ylab = "Tpk", xlab = "Time (MY)", lwd = 4)
+svg("results/Tpk_phenogram_nolabs.svg", width = 10, height = 10)
+par(xaxt="n",yaxt="n")
+phenogram(paintedtree,x=Tpk_matrix,colors=cols,ftype = "off", ylab = "", xlab = "", lwd = 4)
+par(xaxt="s",yaxt="s")
+axis(1, xaxp = c(0, 3223.57, 4), lwd = 2, labels = FALSE)
+axis(2, labels = FALSE, lwd = 2)
 dev.off()
 
 
