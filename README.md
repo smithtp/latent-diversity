@@ -1,6 +1,6 @@
 # latent-diversity
 
-Code for bacterial latent diversity project, pre-print manuscript available at bioRxiv: https://doi.org/10.1101/2021.04.14.439774
+Code for bacterial latent diversity project, published in *eLife* as "Latent functional diversity may accelerate microbial community responses to temperature fluctuations": https://doi.org/10.7554/eLife.80867
 
 The scripts in `/code/` will reproduce the following figures and related analyses based on data in `/data/`
 
